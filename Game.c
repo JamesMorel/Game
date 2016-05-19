@@ -20,15 +20,6 @@ typedef struct _game {
 
 typedef char path[PATH_LIMIT];
 
-/*
-typedef struct _action {
-   int actionCode;
-   path destination;
-   int disciplineFrom;
-   int disciplineTo;
-} action;
-*/
-
 int main (int argc, char * argv[]){
 
 Game newGame (int discipline[], int dice[]){
