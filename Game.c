@@ -95,32 +95,35 @@ int getKPIpoints (Game g, int player){
 }
 
 int getARCs (Game g, int player){
-   int numARCS_a = 0;
-   int numARCS_b = 0;
-   int numARCS_c = 0;
-   int numARCS;
+   int numARC_a = 0;
+   int numARC_b = 0;
+   int numARC_c = 0;
+   int numARC;
 
    if (player == UNI_A){
-      numARCS = numARCS_a;
+      numARC = numARC_a;
    } else if (player == UNI_B){
-      numARCS = numARCS_b;
+      numARC = numARC_b;
    }  else if (player == UNI_C){
-      numARCS = numARCS_c;
+      numARC = numARC_c;
    }
-   return numARCS;
+   return numARC;
 }
 
 int getGO8s (Game g, int player){
-   int numGO8s = 0;
+   int numGO8_a = 0;
+   int numGO8_b = 0;
+   int numGO8_c = 0;
+   int numGO8;
 
-   if (player == UNI_A) {
-      g-> numGO8s++;
-   } else if (player == UNI_B) {
-      g-> numGO8s++;
-   } else if (player == UNI_C) {
-      g-> numGO8s++;
+   if (player == UNI_A){
+      numGO8 = numGO8_a;
+   } else if (player == UNI_B){
+      numAGO8 = numGO8_b;
+   }  else if (player == UNI_C){
+      numGO8 = numGO8_c;
    }
-   return numGO8s;
+   return numGO8;
 }
 
 int getCampuses (Game g, int player){
