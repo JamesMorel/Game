@@ -3,7 +3,7 @@
 #include <assert.h>
 #include "Game.h"
 
-#define NUM_VERTEX 70
+#define NUM_VERTEX 54
 
 typedef struct _vertex {
 	int position;
@@ -69,6 +69,7 @@ int getTurnNumber (Game g){
 }
 
 int getWhoseTurn (Game g){
+	
    return 0;
 }
 
