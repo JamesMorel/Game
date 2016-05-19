@@ -15,8 +15,8 @@ Program: runs some simple assert statements FOR NOW...
 int main (int argc, char * argv[]){
 
     if (getDiceValue == 7){
-        assert (STUDENT_THD = STUDENT_MTV);
-        assert (STUDENT_THD = STUDENT_MMONEY);
+        assert (STUDENt_MTV == 0);
+        assert (STUDENT_MMONEY == 0);
     }
     if (getDiceValue != 7){
         assert (STUDENT_MTV = STUDENT_MTV);
