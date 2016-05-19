@@ -88,7 +88,19 @@ int isLegalAction (Game g, action a){
 // PLAYER SPECIFIC STATS
 
 int getKPIpoints (Game g, int player){
-   return 0;
+    int numKPI_a = 20;
+    int numKPI_b = 20;
+    int numKPI_c = 20;
+    int numKPI;
+    
+    if (player == UNI_A){
+        numKPI = numKPI_a;
+    } else if (player == UNI_B){
+        numKPI = numKPI_b;
+    } else if (player == UNI_C){
+        numKPI = numKPI_c;
+    }
+   return numKPI;
 }
 
 int getARCs (Game g, int player){
@@ -121,15 +133,51 @@ int getGO8s (Game g, int player){
 }
 
 int getCampuses (Game g, int player){
-   return 0;
+   int numCAMPUS_a = 2;
+   int numCAMPUS_b = 2;
+   int numCAMPUS_c = 2;
+   int numCAMPUS;
+
+   if (player == UNI_A){
+      numCAMPUS = numCAMPUS_a;
+   } else if (player == UNI_B){
+      numCAMPUS = numCAMPUS_b;
+   }  else if (player == UNI_C){
+      numCAMPUS = numCAMPUS_c;
+   }
+   return numCAMPUS;
 }
 
 int getIPs (Game g, int player){
-   return 0;
+   int numIP_a = 0;
+   int numIP_b = 0;
+   int numIP_c = 0;
+   int numIP;
+
+   if (player == UNI_A){
+      numIP = numIP_a;
+   } else if (player == UNI_B){
+      numIP = numIP_b;
+   }  else if (player == UNI_C){
+      numIP = numIP_c;
+   }
+   return numIP;
 }
 
 int getPublications (Game g, int player){
-   return 0;
+   int numPUB_a = 0;
+   int numPUB_b = 0;
+   int numPUB_c = 0;
+   int numPUB;
+
+   if (player == UNI_A){
+      numPUB = numPUB_a;
+   } else if (player == UNI_B){
+      numPUB = numPUB_b;
+   }  else if (player == UNI_C){
+      numPUB = numPUB_c;
+   }
+   return numPUB;
 }
 
 int getStudents (Game g, int player, int discipline){
