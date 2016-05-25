@@ -9,6 +9,25 @@ typedef struct _vertex {
 	int position;
 } Vertex;
 
+typedef int student;
+
+typedef int score;
+
+typedef struct _uni *Uni{
+	student numTHD;
+	student numBPS;
+	student numBQN;
+	student numMJ;
+	student numMTV;
+	student numMMONEY;
+	int numArcs;
+	int numPubs;
+	int numIPs;
+	int numCampus;
+	int numGO8;
+	score KPI;
+}
+
 typedef struct _game * Game;
 
 typedef struct _game {
