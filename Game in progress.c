@@ -41,6 +41,8 @@ typedef struct _game {
 
 typedef char path[PATH_LIMIT];
 
+static int getDiscipline(int player, int student);
+
 int main (int argc, char * argv[]){
 
 Game newGame (int discipline[], int dice[]){
@@ -81,8 +83,8 @@ int getTurnNumber (Game g){
 }
 
 int getWhoseTurn (Game g){
-	
-   return 0;
+	int whoseTurn = g->currentTurn%3;
+    return whoseTurn;
 }
 
 int getCampus(Game g, path pathToVertex){
@@ -101,11 +103,11 @@ int isLegalAction (Game g, action a){
 
 int getKPIpoints (Game g, int player){
     int KPIpoints = 0;
-    if(player == 0){
+    if(player == UNI_A){
     	KPIpoints = g->uniA->numKPI;
-    }else if(player == 1){
+    }else if(player == UNI_B){
     	KPIpoints = g->uniB->numKPI;
-    }else if(player == 2){
+    }else if(player == UNI_C){
     	KPIpoints = g->uniC->numKPI;
     }
     return KPIpoints;
@@ -129,11 +131,11 @@ int getKPIpoints (Game g, int player){
 
 int getARCs (Game g, int player){
       int Arcs = 0;
-    if(player == 0){
+    if(player == UNI_A){
     	Arcs = g->uniA->numArcs;
-    }else if(player == 1){
+    }else if(player == UNI_B){
     	Arcs = g->uniB->numArcs;
-    }else if(player == 2){
+    }else if(player == UNI_C){
     	Arcs = g->uniC->numArcs;
     }
     return Arcs;
@@ -155,11 +157,11 @@ int getARCs (Game g, int player){
 
 int getGO8s (Game g, int player){
       int GO8s = 0;
-    if(player == 0){
+    if(player == UNI_A){
     	GO8s = g->uniA->numGO8;
-    }else if(player == 1){
+    }else if(player == UNI_B){
     	GO8s = g->uniB->numGO8;
-    }else if(player == 2){
+    }else if(player == UNI_C){
     	GO8s = g->uniC->numGO8;
     }
     return GO8s;
@@ -182,11 +184,11 @@ int getGO8s (Game g, int player){
 
 int getCampuses (Game g, int player){
        int numCampus = 0;
-    if(player == 0){
+    if(player == UNI_A){
     	numCampus = g->uniA->numCampus;
-    }else if(player == 1){
+    }else if(player == UNI_B){
     	numCampus = g->uniB->numCampus;
-    }else if(player == 2){
+    }else if(player == UNI_C){
     	numCampus = g->uniC->numCampus;
     }
     return numCampus;
@@ -208,11 +210,11 @@ int getCampuses (Game g, int player){
 
 int getIPs (Game g, int player){
       int numIPs = 0;
-    if(player == 0){
+    if(player == UNI_A){
     	numIPs = g->uniA->numIPs;
-    }else if(player == 1){
+    }else if(player == UNI_B){
     	numIPs = g->uniB->numIPs;
-    }else if(player == 2){
+    }else if(player == UNI_C){
     	numIPs = g->uniC->numIPs;
     }
     return numIPs;
@@ -234,6 +236,16 @@ int getIPs (Game g, int player){
 }
 
 int getPublications (Game g, int player){
+      int numPubs = 0;
+    if(player == UNI_A){
+    	numPubs = g->uniA->numPubs;
+    }else if(player == UNI_B){
+    	numPubs = g->uniB->numPubs;
+    }else if(player == UNI_C){
+    	numPubs = g->uniC->numPubs;
+    }
+    return numPubs; 
+/*   
    int numPUB_a = 0;
    int numPUB_b = 0;
    int numPUB_c = 0;
@@ -246,12 +258,31 @@ int getPublications (Game g, int player){
    }  else if (player == UNI_C){
       numPUB = numPUB_c;
    }
+  
    return numPUB;
+*/
 }
 
+
 int getStudents (Game g, int player, int discipline){
+   int numStudents = 0;
+   if(player == UNI_A){
+    	numPubs = g->uniA->numPubs;
+   }else if(player == UNI_B){
+    	numPubs = g->uniB->numPubs;
+   }else if(player == UNI_C){
+    	numPubs = g->uniC->numPubs;
+   }
    return 0;
 }
+
+static int getDiscipline(int player, int student){
+    
+	return
+}
+
+
+
 
 int getExchangeRate (Game g, int player,
                      int disciplineFrom, int disciplineTo){
