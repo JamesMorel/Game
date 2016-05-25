@@ -33,9 +33,10 @@ typedef struct _game * Game;
 
 typedef struct _game {
    int currentTurn;
-   int playerKPIs[4];
-   int numGO8s;
-   Vertex campus[NUM_VERTEX];
+   int whoseTurn;
+   Uni uniA;
+   Uni uniB;
+   Unit uniC;
 } game;
 
 typedef char path[PATH_LIMIT];
@@ -99,6 +100,11 @@ int isLegalAction (Game g, action a){
 // PLAYER SPECIFIC STATS
 
 int getKPIpoints (Game g, int player){
+    
+    
+    
+    
+/*    
     int numKPI_a = 20;
     int numKPI_b = 20;
     int numKPI_c = 20;
@@ -111,6 +117,7 @@ int getKPIpoints (Game g, int player){
     } else if (player == UNI_C){
         numKPI = numKPI_c;
     }
+*/    
    return numKPI;
 }
 
