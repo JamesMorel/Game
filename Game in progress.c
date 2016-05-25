@@ -100,8 +100,15 @@ int isLegalAction (Game g, action a){
 // PLAYER SPECIFIC STATS
 
 int getKPIpoints (Game g, int player){
-    
-    
+    int KPIpoints = 0;
+    if(player == 0){
+    	KPIpoints = g->uniA->numKPI;
+    }else if(player == 1){
+    	KPIpoints = g->uniB->numKPI;
+    }else if(player == 2){
+    	KPIpoints = g->uniC->numKPI;
+    }
+    return KPIpoints;
     
     
 /*    
@@ -118,10 +125,19 @@ int getKPIpoints (Game g, int player){
         numKPI = numKPI_c;
     }
 */    
-   return numKPI;
 }
 
 int getARCs (Game g, int player){
+      int Arcs = 0;
+    if(player == 0){
+    	Arcs = g->uniA->numArcs;
+    }else if(player == 1){
+    	Arcs = g->uniB->numArcs;
+    }else if(player == 2){
+    	Arcs = g->uniC->numArcs;
+    }
+    return Arcs;
+/*  
    int numARC_a = 0;
    int numARC_b = 0;
    int numARC_c = 0;
@@ -134,10 +150,20 @@ int getARCs (Game g, int player){
    }  else if (player == UNI_C){
       numARC = numARC_c;
    }
-   return numARC;
+ */
 }
 
 int getGO8s (Game g, int player){
+      int GO8s = 0;
+    if(player == 0){
+    	GO8s = g->uniA->numGO8;
+    }else if(player == 1){
+    	GO8s = g->uniB->numGO8;
+    }else if(player == 2){
+    	GO8s = g->uniC->numGO8;
+    }
+    return GO8s;
+/*  
    int numGO8_a = 0;
    int numGO8_b = 0;
    int numGO8_c = 0;
@@ -151,9 +177,20 @@ int getGO8s (Game g, int player){
       numGO8 = numGO8_c;
    }
    return numGO8;
+*/   
 }
 
 int getCampuses (Game g, int player){
+       int numCampus = 0;
+    if(player == 0){
+    	numCampus = g->uniA->numCampus;
+    }else if(player == 1){
+    	numCampus = g->uniB->numCampus;
+    }else if(player == 2){
+    	numCampus = g->uniC->numCampus;
+    }
+    return numCampus;
+/*   
    int numCAMPUS_a = 2;
    int numCAMPUS_b = 2;
    int numCAMPUS_c = 2;
@@ -166,10 +203,20 @@ int getCampuses (Game g, int player){
    }  else if (player == UNI_C){
       numCAMPUS = numCAMPUS_c;
    }
-   return numCAMPUS;
+*/ 
 }
 
 int getIPs (Game g, int player){
+      int numIPs = 0;
+    if(player == 0){
+    	numIPs = g->uniA->numIPs;
+    }else if(player == 1){
+    	numIPs = g->uniB->numIPs;
+    }else if(player == 2){
+    	numIPs = g->uniC->numIPs;
+    }
+    return numIPs;
+/*  
    int numIP_a = 0;
    int numIP_b = 0;
    int numIP_c = 0;
@@ -183,6 +230,7 @@ int getIPs (Game g, int player){
       numIP = numIP_c;
    }
    return numIP;
+*/
 }
 
 int getPublications (Game g, int player){
